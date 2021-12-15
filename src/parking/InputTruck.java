@@ -2,9 +2,9 @@ package parking;
 
 import utilities.WarehouseRequest;
 
-public class inputTruck extends Truck {
+public class InputTruck extends Truck {
 
-	public inputTruck(String licensePlate) {
+	public InputTruck(String licensePlate) {
 		super(licensePlate);
 	}
 
@@ -14,7 +14,7 @@ public class inputTruck extends Truck {
 	}
 	
 	
-	 // Method that checks if the cargo is empty
+	 // Method that checks if the cargo is empty on truck
 	 
 	public boolean isEmpty() {
 		return this.cargo.isEmpty();

@@ -3,12 +3,10 @@ package utilities;
 public class Item {
 	private String name;
 	private int weight;
-	private int demand;
 	
 	public Item(String name, int weight, int demand) {
 		setName(name);
 		setWeight(weight);
-		setDemand(demand);
 	}
 	
 	public String getName() {
@@ -26,12 +24,5 @@ public class Item {
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
-	
-	public int getDemand() {
-		return demand;
-	}
-	
-	public void setDemand(int demand) {
-		this.demand = demand;
-	}
 }
+	

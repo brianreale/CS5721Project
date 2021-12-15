@@ -1,6 +1,8 @@
-package parking;
+package Repository;
 import java.util.ArrayList;
 import java.util.Iterator;
+
+import parking.Truck;
 
 public class TruckRepository implements Container { 
 	public ArrayList<Truck> trucks; 

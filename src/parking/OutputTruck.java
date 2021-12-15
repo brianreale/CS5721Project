@@ -7,8 +7,8 @@ import utilities.Item;
 import utilities.WarehouseRequest;
 
 
-public class outputTruck extends Truck{
-	public outputTruck(String licensePlate) {
+public class OutputTruck extends Truck{
+	public OutputTruck(String licensePlate) {
 		super(licensePlate);
 	}
 
@@ -45,12 +45,6 @@ public class outputTruck extends Truck{
 }
 
 
-//	@Override
-//	public Iterator<Truck> getIterator() {
-//		TruckIterator<Truck> myIterator = new TruckIterator();
-//	}
-//
-//}
 
 
 

@@ -2,18 +2,18 @@ package parking;
 
 import java.util.ArrayList;
 
-import observer_pattern.Observer;
+import Warehouse.Agent;
 import observer_pattern.Subject;
 import utilities.Item;
 import utilities.WarehouseRequest;
 
-//public class requestObserver implements Observer {
-public class requestObserver {
 
-	//List of all the request objects created by every truck in the observed parking.
+public class RequestObserver {
+
+	//List of all the request objects created by every truck and agent in the observed parking.
 	private final ArrayList<WarehouseRequest> requests;
 
-	public requestObserver()
+	public RequestObserver()
 	{
 		this.requests = new ArrayList<>();
 	}
@@ -23,6 +23,14 @@ public class requestObserver {
 		for (Truck truck : ((Parking) subject).getTrucks()) {
 			this.requests.add(truck.getRequest());
 			((Parking) subject).removeTruck(truck);
+		}
+	}
+		
+	public void updateAgent(Subject subject)
+	{
+		for (Agent agent : ((Parking) subject).getAgents()) {
+			this.requests.add(agent.getRequest());
+			((Parking) subject).removeAgent(agent);
 		}
 	}
 
@@ -50,6 +58,10 @@ public class requestObserver {
 
 //	@Override
 	public void update(Parking subject) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void updateAgent(Parking subject) {
 		// TODO Auto-generated method stub
 		
 	}
